@@ -1,0 +1,411 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+@import '_variable.scss';
+body{
+    background : $dark;
+    font-family: 'Poppins', sans-serif;    
+}
+.nav-top{
+    background : transparent !important;
+    backdrop-filter: blur(10px);
+    .nav-link{
+        font-size : 17px;
+        color : white;
+        padding-left : 1rem !important;
+        padding-right : 1rem !important;
+    }
+}
+.btn{
+    &.btn-primary{
+        background:$purple;
+        border-color:$purple;
+    }
+    &.btn-circle{
+        border-radius: 50px;
+    }
+}
+.border-yellow{
+    border-color:$yellow !important;
+}
+.p{
+    &x-45{
+        padding-left : 2.5rem !important;
+        padding-right : 2.5rem !important;
+    }
+    &y-25{
+        padding-top : .8rem !important;
+        padding-bottom : .8rem !important;
+    }
+}
+.color{
+    &-white{
+        color:white;
+    }
+    &-textgrey{
+        color:$textGrey;
+    }
+    &-yellow{
+        color: $yellow;
+    }
+    &-purple{
+        color: $purple;
+    }
+}
+.fs{
+    &-18{
+        font-size : 18px;
+    }
+}
+hr{
+    &.white{
+        border-color:white;
+    }
+}
+#hero{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    &::after{
+        content : '';
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        right: 0;
+        top : 0;
+        background : $bgPurple;
+        z-index: -1;
+    }
+    p{
+        font-size : 18px;
+    }
+    h1{
+        color:white;
+        font-weight: bold;
+        font-size : 45px;
+    }
+}
+.img-hero{
+    position: relative;
+    img{
+        margin-left: 10%;
+        width : 90%;
+        height: 400px;
+        object-fit: cover;
+        border-radius: 50px;
+    }
+    span{
+        background : $yellow;
+        width: 80px;
+        padding-left : 0.3rem;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 100%;
+        position: absolute;
+        color : $purple;
+        font-size : 40px;
+        left : 55%;
+        top : 50%;
+        transform: translate(-50%,-50%);
+    }
+    &:before{
+        border-radius: 50px;
+        content : "";
+        position: absolute;
+        left : 10%;
+        width : 90%;
+        height : 100%;
+        background : rgba(0,0,0,0.5);
+    }
+}
+.img-partner{
+    img{
+        opacity: 0.3;
+        width: 100px;
+        margin-right:15px;
+    }
+}
+.text-line{
+    position: absolute;
+    display: flex;
+    top:0;
+    right : 20px;
+    align-items: center;
+    flex-direction: row;
+    writing-mode: vertical-rl;
+    font-weight: bold;
+    font-size: 35px;
+    color: transparent;
+    -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: $yellow;
+    .line{
+        margin-bottom: 20px;
+        width:1px;
+        background: $purple;
+        height: 200px;
+    }
+}
+.box-icon{
+    border : 1px solid $yellow;
+    justify-content: center;
+    align-items: center;
+    color:$yellow;
+    width: 70px;
+    height: 70px;
+    font-size: 25px;
+    &.sm{
+        width: 50px;
+        height: 50px;
+        font-size: 18px;
+    }
+    display: flex;
+    position: relative;
+}
+.pipes{
+    position: absolute;
+    left : 0;
+    top : 0;
+    width: 200%;
+    transform: translateX(-25%) rotate(45deg);
+    z-index: -1;
+    display: flex ;
+    .pipe{
+        margin-right: 10px;
+        width: 10px;
+        height: 80px;
+        background: #3f3e47;
+        &:nth-child(1){
+            margin-top : 20px;
+        }
+        &:nth-child(2){
+            margin-top : 40px;
+        }
+        &:nth-child(3){
+            margin-top : 60px;
+        }
+    }
+}
+.pricepool-box{
+    background: $bgPurple;
+    padding : 1.5rem 1.8rem;
+    position: relative;
+    p{
+        font-size : 14px;
+    }
+    .content{
+        width: 90%;
+    }
+    .sticky{
+        position: absolute;
+        top : 0;
+        right: 5px;
+        font-weight: bold;
+        letter-spacing: 3px;
+        font-size : 50px;
+        color: transparent;
+        -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: $yellow;
+        opacity: 0.5;
+    }
+    &::before{
+        content : "";
+        position: absolute;
+        width : 103%;
+        height : 110%;
+        border : 1px solid $yellow;
+        top: -5%;
+        left: -1.5%;
+    }
+}
+.text-outline{
+    color: transparent;
+    -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 1px;
+    &.white{
+        -webkit-text-stroke-color: white;
+    }
+}
+.price-text{
+    font-size : 50px;
+}
+#pricepool{
+    background: url('https://i.ytimg.com/vi/vOKKC-9nfZQ/maxresdefault.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index : 2;
+    &:before{
+        content : "";
+        position: absolute;
+        left : 0;
+        top : 0;
+        width : 100%;
+        height : 100%;
+        z-index : -1;
+        background : rgba(9,7,21,0.85);
+    }
+}
+.pipe-only{
+    width : 40px;
+    height : 3px;
+    background:$yellow;
+}
+.accordion-item{
+    background : $bgPurple;
+    color:$textGrey;
+    .accordion-button{
+        &:not(.collapsed){
+            background : $purple;
+            color:$yellow;
+        }
+        font-size : 17px;
+        font-weight: bold;
+        color:$bgPurple;
+        background : $textGrey;
+    }
+}
+.box-rule{
+    background : $bgPurple;
+    border-radius: 8px;
+    color:$textGrey;
+    font-size : 14px;
+    padding : 1rem;
+    
+    .number{
+        &::before{
+            content : "Rules";
+            z-index: -1;
+            top : 0;
+            right: -10px;
+            transform :translateX(100%);
+            position: absolute;
+            font-weight: bold;
+            font-size: 35px;
+            color: transparent;
+            -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: $yellow;
+        }
+        position: relative;
+        z-index: 2;
+        display: flex;
+        width : 50px;
+        letter-spacing: 3px;
+        height : 50px;
+        border-radius : 100%;
+        background : $purple;
+        color:$yellow;
+        align-items: center;
+        justify-content: center;
+        font-size : 20px;
+        font-weight: bold;
+        margin-bottom : 1rem;
+    }
+}
+#rules{
+    position: relative;
+    overflow-x: hidden;
+    z-index : 2;
+    .hero-ml{
+        z-index : -1;
+        position: absolute;
+        width : 700px;
+        &.left{
+            bottom : 15%;
+            left : -10%;
+        }
+        &.right{
+            top : 15%;
+            right : -10%;
+        }
+    }
+}
+#gameday{
+    background: $bgPurple;
+    position: relative;
+    min-height: 100vh;
+    &::before{
+        content : "";
+        width: 50%;
+        position: absolute;
+        top : 0;
+        right: 0px;
+        height: 100%;
+        // clip-path: polygon(50% 0, 100% 0, 100% 100%, 0% 100%);
+        clip-path: polygon(50% 0, 100% 0, 100% 100%, 0% 100%);
+        background: url('https://img.sportstars.id//2022/08/80u9go/master_Mb5ypt6122_1979_nama_hero_mobile_legends_lengkap_foto_wallpapertip.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    &::after{
+        // content : "";
+        width: 50%;
+        position: absolute;
+        top : 0;
+        right: 0px;
+        height: 100%;
+        clip-path: polygon(50% 0, 100% 0, 100% 100%, 0% 100%);
+        background : rgba(9,7,21,0.5);
+        backdrop-filter : blur(3px);
+    }
+}
+#gamedayCount{
+    span{
+        background : $purple;
+        padding : 1rem 2rem;
+        color : $yellow;
+        font-weight: bold;
+        font-size: 20px;
+    }
+}
+a{
+    color:$yellow
+}
+.input{
+    position: relative;
+    label{
+        position: absolute;
+        background: $bgPurple;
+        color:$yellow;
+        top : 0;
+        font-size: 16px;
+        font-style: italic;
+        font-weight: bold;
+        left : 10px;
+        padding : .5rem 1rem;
+        transform: translateY(-50%);
+    }
+    input{
+        font-style: italic;
+        background : $bgPurple;
+        padding: 0.9rem .75rem;
+        border-width : 3px;
+        border-color : $yellow;
+        border-radius: 0px;
+        color:$textGrey;
+        &:focus{
+            color:$textGrey;
+            background : $bgPurple;
+        }
+    }
+}
+.btn-custom{
+    clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
+    height: 50px;
+    font-weight: bold;
+    font-size: 17px;
+    width : 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $yellow;
+    color:$bgPurple; 
+}
+#footer{
+    background: $bgPurple;
+}
